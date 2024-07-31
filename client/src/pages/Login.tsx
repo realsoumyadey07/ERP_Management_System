@@ -15,13 +15,14 @@ export default function Login() {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm<LoginFormInput>();
   const onSubmit: SubmitHandler<LoginFormInput> = (data: LoginFormInput) => {};
   return (
     <div className="w-full h-screen flex justify-center items-center bg-slate-100">
       <div className="p-5 shadow-lg shadow-gray-500/50 flex flex-col gap-7 w-80 border-blue-500 border-t-4 rounded-md bg-white">
         <div className="text-center">
-          <h2 className="font-semibold text-xl">
+          <h2 className="font-semibold text-xl hover:text-blue-600">
             Login to {common.getEnv("VITE_APPLICATION_NAME")}
           </h2>
         </div>
